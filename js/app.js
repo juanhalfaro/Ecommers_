@@ -43,4 +43,27 @@ nxtBtn.addEventListener('click', () => {
  }
  productIndex.innerHTML = productData[currentProduct].index
  smProductDes.innerHTML = productData[currentProduct].des.slice(0,80)
+
+ smImgContainer.classList.add('slide')
+ productImgContainer.classList.add('slide')
+ backDropImg.classList.add('fade')
+ productDetail.classList.add('fade')
+
+ setTimeout(() => {
+	productName.innerHTML = productData[currentProduct].name
+	productDes.innerHTML = productData[currentProduct].des
+	smImg.src = productImg = backDropImg.src =
+	`
+	img/${productData[currentProduct].image}
+	`
+}, 500)
+
+setTimeout(() => {
+	smImgContainer.classList.remove('slide')
+	productImgContainer.classList.remove('slide')
+	backDropImg.classList.remove('fade')
+	productDetail.classList.remove('fade')
+}, 2000);
+
 })
+
